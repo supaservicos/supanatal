@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adicione este estilo ao seu arquivo styles.css */
+
+@font-face {
+    font-family: 'Univia Pro';
+    src: url('../src/font/UniviaPro-UltraItalic.eot'); /* IE9 Compat Modes */
+    src: url('../src/font/UniviaPro-UltraItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../src/font/UniviaPro-UltraItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('../src/font/UniviaPro-UltraItalic.woff') format('woff'), /* Modern Browsers */
+         url('../src/font/UniviaPro-UltraItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../src/font/UniviaPro-UltraItalic.svg#UniviaPro-UltraItalic') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Univia Pro', sans-serif !important;
+}
+
+/* Scroll Style */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: url('../img/cursor.svg'), auto; /* Corrija o caminho da imagem */
+    background: -webkit-linear-gradient(45deg, #2444FF, #24C4FF);
+    border-radius: 5px;
+    animation: changeColor 6s linear infinite;
+}
+
+p{
+    @apply text-center text-white;
+}
+
+ul a:hover{
+    transition: all .2s linear;
+    color: #021897;
+}
+
+.hidden { display: none; }
+.fade-out {
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-in.show {
+    opacity: 1;
+}
+
+#natalColor{
+    /* background: linear-gradient(to right, #ff0000, #8b0000); */
+    background: linear-gradient(to right, #2444FF, #24C4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#supaLogo{
+    background: linear-gradient(to right, #2444FF, #24C4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply font-bold;
+}
+
+@keyframes supaChangeColor{
+    0%{color: #2444FF;}
+    50%{color: #021897;}
+    100%{color: #0678a1;}
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes processingAnimation {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+.loader-group .loader{
+    height: 1.5rem;
+    @apply rounded-xl w-full; 
+    background: linear-gradient(90deg, #2444FF, #24C4FF);
+    background-size: 200% 100%;
+    animation: processingAnimation 20s ease infinite;
+}
+
+/* Presente */
+.presentes{
+    @apply w-full;
+}
+
+.presente-group{
+    @apply flex flex-wrap justify-center items-center pl-2 w-full;
+}
+.presente-card{
+    @apply flex flex-col gap-[0.5] m-1 md:m-2 justify-center items-center;
+}
+
+.info .description{
+    @apply md:text-xs text-[0.15rem];
+    background: linear-gradient(to right, #2444FF, #24C4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countdown {
+    font-size: 0.875rem;
+    background: linear-gradient(to right, #2444FF, #2444FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+iframe {
+    width: 100%;
+    height: 200vh;
+    border: none;
+}
