@@ -2,7 +2,7 @@ const presentes = [
     {
         nome: 'Apple Airpods 3th G.',
         dataInicio: new Date('2024-12-20T00:00:00+01:00'),
-        dataFim: new Date('2024-12-25T23:59:59+01:00'),
+        dataFim: new Date('2025-12-25T23:59:59+01:00'),
         disponivel: false,
         descricao: 'by: OD Onlivendas & Okenio M',
         img: 'img/presentes/airpods.webp'
